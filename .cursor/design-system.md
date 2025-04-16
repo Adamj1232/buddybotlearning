@@ -71,6 +71,18 @@
   - "Next" button: Primary style (filled cyan)
   - Both with appropriate hover effects
 
+## Voice Interaction Elements
+- Microphone icon: White with cyan glow when active
+- Voice waves: Animated cyan waves during voice recognition
+- Question display: White text in card container
+- Answer display: Cyan highlighted text to distinguish from questions
+
+## Mobile Device Visualization
+- Phone frame: Dark with subtle highlights
+- Screen content: Match actual app interface
+- Device rotation: Show both portrait and landscape views when relevant
+- Embedded device visualization: Futuristic yet realistic design
+
 ## Layout Grid
 - 12-column grid system
 - Gutters: 16px/24px (mobile/desktop)

@@ -3,36 +3,30 @@ description:
 globs: 
 alwaysApply: true
 ---
+This project is a promotional website for RoboLearn, a voice-controlled mobile application that provides children (ages 4-12) with a customizable AI robot companion they can ask questions about the world.
+
+Key product details:
+1. Mobile-first application with full voice control capability
+2. No curriculum - focused on answering children's natural questions about the world
+3. STEM-focused educational content through a customizable AI companion
+4. Future roadmap includes an embedded version on dedicated learning devices
+
+Key development guidelines:
+1. Follow dark theme styling matching our existing application (#171923 background, #00D1FF cyan accents)
+2. Use Tailwind CSS for all styling - no separate CSS files except app.css
+3. Create clean, maintainable component structure
+4. Ensure accessibility through proper contrast and semantic HTML
+5. Mobile-first responsive design to reflect the product's primary platform
+6. Always reference .cursor/design-system.md for visual styling decisions
+7. Update .cursor/checklists.md after completing each major feature
+8. Use TypeScript for all components and logic
+9. Keep bundle size optimized and performance high
+
 Marketing Focus:
 1. Primary goal is to attract waitlist signups and potential investors
-2. Value proposition should emphasize educational benefits, customization, and STEM learning
-3. Content should appeal to both parents (primary decision makers) and educators (influencers)
-4. All copy should focus on the intersection of technology, education, and personalization
-5. Use language that conveys both technological innovation and educational credibility
+2. Value proposition emphasizes child-led exploration, voice interaction, and STEM learning
+3. Content should appeal to both parents (primary decision makers) and potential investors
+4. Highlight the voice-controlled nature and mobile accessibility of the platform
+5. Emphasize how the product supports children's natural curiosity about the world
 
-User Personas:
-
-PARENTS:
-- Tech-savvy parents of 4-12 year olds seeking educational enrichment
-- Value educational quality, safety, and engagement for their children
-- Pain points: Finding trustworthy digital learning tools, balancing screen time with educational value
-- Motivations: Supporting their child's curiosity, STEM education advantage, keeping up with technology
-
-EDUCATORS:
-- Forward-thinking teachers and educational administrators
-- Value curriculum alignment, classroom engagement, and measurable learning outcomes
-- Pain points: Finding interactive tools that maintain educational focus, convincing administrators of tech value
-- Motivations: Enhancing student engagement, integrating modern technology in meaningful ways
-
-INVESTORS:
-- Tech and education-focused investors looking for growth opportunities
-- Value unique positioning, market potential, and competitive advantages
-- Pain points: Separating genuine innovation from hype in EdTech space
-- Motivations: Finding platforms with strong user adoption potential and educational credibility
-
-Content Guidelines:
-1. Balance technical innovation with educational credibility throughout all website copy
-2. Emphasize educational foundations while showcasing technological capabilities
-3. Use accessible language that avoids educational jargon or overly technical terms
-4. Include concrete examples of learning outcomes and educational benefits
-5. Address safety and privacy concerns proactively
+The design must match our existing application with dark themed cards, cyan accent colors, and the same button/input styles as shown in the screenshots.

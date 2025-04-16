@@ -15,9 +15,10 @@
 - Path: `src/lib/components/Hero.svelte`
 - Features:
   - Dark background matching app theme
-  - Headline + subheading in light text
+  - Headline emphasizing voice interaction and learning
+  - Subheading highlighting customization
   - CTA button with cyan glow effect
-  - Illustration of customizable robot
+  - Interactive robot demo (ideally with voice interaction demo)
   - Contained in rounded card layout
 - Props:
   - `headline` - Main headline text
@@ -55,7 +56,7 @@
 - Features:
   - Dark themed cards
   - Autoplay + manual navigation
-  - Quote + attribution
+  - Quote + attribution (parent and child age)
   - Avatar/image
   - Cyan dot pagination indicators
 - Props:
@@ -72,9 +73,23 @@
   - Feature toggles
   - Progress indicator dots (as shown in screenshot)
   - Next/Back navigation buttons matching app style
+  - Optional: Voice command demonstration capability
 - Props:
   - `presets` - Array of preset configurations
   - `onComplete` - Callback when customization complete
+  - `enableVoice` - Boolean to enable voice demo (if implemented)
+
+## Voice Interaction Demo
+- Path: `src/lib/components/VoiceDemo.svelte`
+- Features:
+  - Microphone button with animation
+  - Text display showing sample questions/responses
+  - Visual feedback during voice recognition
+  - Sample Q&A about educational topics
+- Props:
+  - `sampleQuestions` - Array of sample questions
+  - `onActivate` - Callback when voice is activated
+  - `isSimulation` - Whether to run a simulated demo
 
 ## Waitlist Form
 - Path: `src/lib/components/WaitlistForm.svelte`
@@ -84,6 +99,7 @@
   - Submit button with cyan background
   - Success/error messages
   - Styling matching screenshot input field
+  - Option to specify interest (parent, educator, investor)
 - Props:
   - `onSubmit` - Form submission handler
   - `buttonText` - Submit button text
@@ -129,3 +145,13 @@
   - `steps` - Total number of steps
   - `currentStep` - Current active step (1-based)
   - `onStepClick` - Optional callback when step is clicked
+
+## Device Demo
+- Path: `src/lib/components/DeviceDemo.svelte`
+- Features:
+  - Mobile phone frame containing app demo
+  - Interactive elements showing voice interaction
+  - Potential future embedded device visualization
+- Props:
+  - `deviceType` - "mobile" or "embedded"
+  - `demoContent` - Content to show in the device

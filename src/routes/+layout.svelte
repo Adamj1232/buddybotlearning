@@ -2,6 +2,7 @@
   import '../app.css';
   import Navigation from '../components/Navigation.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import WaitlistModal from '../components/WaitlistModal.svelte';
 </script>
 
 <Navigation />
@@ -10,4 +11,5 @@
   <slot />
 </main>
 
-<Footer /> 
+<Footer />
+<WaitlistModal /> 
