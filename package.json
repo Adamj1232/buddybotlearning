@@ -38,6 +38,8 @@
     "vite": "^6.3.0"
   },
   "dependencies": {
+    "@iconify/svelte": "^4.2.0",
+    "@rgossiaux/svelte-headlessui": "^2.0.0",
     "svelte-inview": "^4.0.4"
   }
 }

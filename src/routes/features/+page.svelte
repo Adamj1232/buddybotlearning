@@ -293,6 +293,7 @@
               ? "The sky looks blue because sunlight bounces off tiny bits in the air, like when you shine a flashlight through water!" 
               : "The sky appears blue due to a phenomenon called Rayleigh scattering, where sunlight interacts with air molecules, scattering blue wavelengths more than others."}
             voiceState="responding"
+            isAnswering={false}
           />
         </div>
 
@@ -372,6 +373,7 @@
                   question={example.question}
                   answer="Loading personalized response..."
                   voiceState="processing"
+                  isAnswering={false}
                 />
               </div>
             {/each}

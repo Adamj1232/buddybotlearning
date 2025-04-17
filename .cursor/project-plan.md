@@ -38,9 +38,18 @@
 - Personality: Curious, engaging, child-friendly yet sophisticated
 - UI Elements: Glowing accents, progress indicators, contained card layouts
 
+## SEO & AI Discoverability Strategy
+
+- Primary audience: Parents of children ages 4-12, educators, educational technology investors
+- Key search terms: "AI for children learning", "educational AI companion", "voice learning for kids"
+- LLM optimization focus: Clear entity definition, semantic structure, query-focused content
+- Technical approach: Lean implementation, performance-focused, minimal dependencies
+- Development philosophy: Progressive enhancement, start simple and enhance iteratively
+
 ## Interactive Elements
 - Robot customizer demo showcasing voice interaction
 - Waitlist signup with email validation
 - Animated section transitions
 - Testimonial carousel
 - Voice command demonstration (if feasible)
+

@@ -109,7 +109,7 @@
       <div class="space-y-4">
         <!-- Question -->
         <div class="flex justify-end">
-          <div class="bg-accent-primary rounded-2xl rounded-tr-sm px-4 py-2 max-w-[80%] transform transition-all duration-300 hover:scale-102">
+          <div class="bg-accent-primary rounded-2xl rounded-tr-sm px-4 py-2 max-w-[80%] transform transition-all duration-300 hover:scale-[1.02]">
             <p class="text-white">{question}</p>
           </div>
         </div>
@@ -137,9 +137,7 @@
       <!-- Voice Input -->
       <div class="absolute bottom-12 left-0 right-0 flex justify-center">
         <button 
-          class="p-4 rounded-full bg-accent-primary shadow-glow hover:shadow-glow-hover transition-all duration-300
-            {voiceState === 'listening' ? 'animate-pulse' : ''}
-            {voiceState === 'processing' ? 'animate-bounce' : ''}"
+          class="voice-input-btn {voiceState === 'listening' ? 'active animate-pulse' : ''} {voiceState === 'processing' ? 'animate-bounce' : ''}"
           aria-label="Toggle voice input"
           on:click={toggleVoiceInput}
         >
@@ -172,16 +170,8 @@
     animation: wave 2s ease-in-out infinite;
   }
 
-  .scale-102 {
-    transform: scale(1.02);
-  }
-
-  .mobile-device {
-    @apply w-full max-w-sm mx-auto;
-  }
-
   .voice-input-btn {
-    @apply p-3 rounded-full bg-accent-primary shadow-glow;
+    @apply p-4 rounded-full bg-accent-primary shadow-glow;
     transition: all 0.3s ease;
   }
 

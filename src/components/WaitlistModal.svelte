@@ -65,6 +65,13 @@
     }
   }
 
+  function handleKeyPress(event: KeyboardEvent) {
+    // Check if the key pressed is 'Enter' or 'Space'
+    if (event.key === 'Enter' || event.key === 'Space') {
+      handleClose();
+    }
+  }
+
   onMount(() => {
     // Add event listeners
     document.addEventListener('mouseleave', handleMouseLeave);
@@ -90,9 +97,15 @@
 {#if isVisible}
   <div
     class="modal-overlay"
-    transition:fade={{ duration: 200 }}
+    role="button"
+    tabindex="0"
     on:click={handleClose}
+    on:keypress={handleKeyPress}
+    aria-label="Close modal"
+    transition:fade={{ duration: 200 }}
   >
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
     <div
       class="modal-content"
       transition:fly={{ y: 20, duration: 300 }}

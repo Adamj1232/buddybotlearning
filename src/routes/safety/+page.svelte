@@ -349,6 +349,7 @@
           question="Show me the parent dashboard"
           answer="Here's a preview of our comprehensive parental controls dashboard."
           voiceState="responding"
+          isAnswering={false}
         />
       </div>
     </div>
@@ -494,10 +495,6 @@
     0% { transform: scale(0); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
-  }
-
-  .checkmark {
-    animation: checkmark 0.5s ease-out forwards;
   }
 
   @keyframes fadeInUp {

@@ -22,6 +22,27 @@ Key development guidelines:
 8. Use TypeScript for all components and logic
 9. Keep bundle size optimized and performance high
 
+Lean Implementation Requirements:
+1. Prioritize performance and simplicity in all implementations
+2. Avoid unnecessary dependencies or bloated libraries
+3. Implement features progressively - start basic and enhance iteratively
+4. Maintain fast load times and smooth interactions as highest priority
+5. Code should be clean, well-commented, and maintainable
+6. Focus on core functionality before adding enhancements
+7. Mobile-first approach to ensure responsiveness across all devices
+8. Balance visual appeal with performance considerations
+
+SEO & Discoverability Requirements:
+1. Optimize all content for both traditional search engines and LLM systems
+2. Implement clear entity definitions and relationships throughout content
+3. Use semantic HTML5 elements and proper content hierarchy
+4. Create query-focused content that directly answers likely user questions
+5. Implement structured data using Schema.org for all key pages
+6. Ensure all pages have optimized metadata (titles, descriptions)
+7. Focus on educational credibility and parent trust signals
+8. Maintain consistent terminology and classification throughout
+9. Create content with high factual density and educational grounding
+
 Marketing Focus:
 1. Primary goal is to attract waitlist signups and potential investors
 2. Value proposition emphasizes child-led exploration, voice interaction, and STEM learning

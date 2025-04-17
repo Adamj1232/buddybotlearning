@@ -199,14 +199,15 @@
       </div>
 
       <div class="form-group">
-        <label>Child's Age Range (optional)</label>
-        <div class="checkbox-group">
+        <label for="age-range">Child's Age Range (optional)</label>
+        <div class="checkbox-group" id="age-range">
           {#each ageRangeOptions as age}
             <label class="checkbox">
               <input
                 type="checkbox"
                 bind:group={ageRanges}
                 value={age}
+                id="age-{age}"
               />
               <span>{age}</span>
             </label>
@@ -215,14 +216,15 @@
       </div>
 
       <div class="form-group">
-        <label>Areas of Interest (optional)</label>
-        <div class="checkbox-group">
+        <label for="interests">Areas of Interest (optional)</label>
+        <div class="checkbox-group" id="interests">
           {#each interestOptions as interest}
             <label class="checkbox">
               <input
                 type="checkbox"
                 bind:group={interests}
                 value={interest}
+                id="interest-{interest}"
               />
               <span>{interest}</span>
             </label>

@@ -1,0 +1,6 @@
+# Allow all user agents
+User-agent: *
+Allow: /
+
+# Sitemap location (adjust URL if needed)
+Sitemap: https://www.robolearn.ai/sitemap.xml 
