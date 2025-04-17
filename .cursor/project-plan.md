@@ -53,3 +53,20 @@
 - Testimonial carousel
 - Voice command demonstration (if feasible)
 
+## Homepage Optimization Strategy
+
+- Visual hierarchy: Clear progression from headline to explanation to CTA
+- Balance: Text content balanced with visual elements
+- Conversion focus: Primary CTA (waitlist) prominently displayed
+- Trust building: Social proof, educational credentials, and safety indicators
+- Performance: Maintain fast loading while adding visual enhancements
+- Mobile experience: Ensure all enhancements work well on small screens
+
+## Waitlist Conversion Strategy
+
+- Trust building: Security indicators, privacy notices, and educational credibility
+- Excitement creation: Limited spots, early access benefits, and partnership language
+- Strategic display: Contextual timing based on user engagement
+- Progressive engagement: Multiple touchpoints before full form display
+- Immediate value: Provide resources or benefits upon signup
+- Family-focused language: Emphasize partnership in children's education

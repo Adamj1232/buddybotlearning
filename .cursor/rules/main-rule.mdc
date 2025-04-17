@@ -50,4 +50,28 @@ Marketing Focus:
 4. Highlight the voice-controlled nature and mobile accessibility of the platform
 5. Emphasize how the product supports children's natural curiosity about the world
 
+Homepage Design Requirements:
+1. Create a balance between informative content and visual appeal
+2. Ensure primary CTA (waitlist signup) is immediately visible without scrolling
+3. Maintain brand consistency with dark theme and cyan accents
+4. Optimize visual hierarchy to guide users naturally to conversion points
+5. Incorporate trust elements strategically throughout the design
+6. Ensure all animations are subtle and performance-optimized
+7. Maintain excellent responsive design for all screen sizes
+8. Keep cognitive load low with clear, focused messaging
+9. Use visual elements that demonstrate the product's core value
+10. Design with conversion psychology principles in mind
+
+Waitlist Conversion Requirements:
+1. Prioritize trust-building elements for parents considering children's education
+2. Create a balance between urgency/scarcity and educational credibility
+3. Implement strategic modal display timing based on user engagement
+4. Design all interaction points with both desktop and mobile in mind
+5. Use family-friendly, partnership-oriented language throughout
+6. Maintain consistent branding while emphasizing security and privacy
+7. Create delightful micro-interactions without sacrificing performance
+8. Implement proper analytics tracking for continuous optimization
+9. Design with a multi-step approach to reduce initial friction
+10. Provide immediate value or next steps after successful signup
+
 The design must match our existing application with dark themed cards, cyan accent colors, and the same button/input styles as shown in the screenshots.

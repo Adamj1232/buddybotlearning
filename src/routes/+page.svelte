@@ -1,36 +1,10 @@
 <script lang="ts">
   import VoiceDemo from '../components/VoiceDemo.svelte';
   import MobilePreview from '../components/MobilePreview.svelte';
+  import Icon from '@iconify/svelte';
 
-  let currentStep = 1;
-  const totalSteps = 3;
-
-  const steps = [
-    {
-      title: 'Ask Anything',
-      description: 'Your child can ask any question about the world, from science to history to "why is the sky blue?"'
-    },
-    {
-      title: 'Voice-First Learning',
-      description: 'Natural conversations with a friendly AI companion who adapts to your child\'s interests and pace.'
-    },
-    {
-      title: 'Safe & Private',
-      description: 'Built with children\'s safety in mind, featuring age-appropriate content and privacy controls.'
-    }
-  ];
-
-  function nextStep() {
-    if (currentStep < totalSteps) {
-      currentStep++;
-    }
-  }
-
-  function prevStep() {
-    if (currentStep > 1) {
-      currentStep--;
-    }
-  }
+  const waitlistCount = 1753;
+  const spotsRemaining = 247;
 </script>
 
 <svelte:head>
@@ -90,173 +64,271 @@
   </script>
 </svelte:head>
 
-<div class="relative overflow-hidden">
+<div class="relative overflow-hidden bg-background">
   <!-- Hero Section -->
-  <section class="relative pt-24 pb-32">
+  <section class="relative flex items-center justify-center text-center py-24 px-4 md:px-8 lg:px-16 min-h-[70vh] overflow-hidden">
     <!-- Background gradient -->
-    <div class="absolute inset-0 bg-gradient-to-b from-background via-background to-background-light opacity-90"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-background via-background to-background-light opacity-90 z-0"></div>
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
-          <span class="gradient-text">
-            RoboLearn: Voice AI
-          </span>
-          <br />
-          <span class="text-text-primary">
-            Learning Companion for Children
-          </span>
-        </h1>
-        <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-12">
-          <strong>What is RoboLearn?</strong> RoboLearn is a voice-controlled mobile app where children (ages 4-12) explore the world by asking questions to a friendly AI companion. It's safe, engaging, and fosters natural curiosity through conversation.
-        </p>
-        
-        <!-- How RoboLearn Works Section -->
-        <div class="max-w-2xl mx-auto mb-12 text-left">
-          <h2 class="text-2xl font-semibold text-center mb-6">How RoboLearn Works</h2>
-          <ol class="space-y-4 list-decimal list-inside text-text-secondary">
-            <li><strong class="text-text-primary">Ask Anything:</strong> Your child uses simple voice commands to ask questions about any topic they're curious about.</li>
-            <li><strong class="text-text-primary">Engaging Conversations:</strong> Our AI companion provides age-appropriate, informative answers in a friendly, conversational style.</li>
-            <li><strong class="text-text-primary">Safe Exploration:</strong> Content is carefully curated and filtered for safety, allowing children to explore freely within secure boundaries.</li>
-            <li><strong class="text-text-primary">Learning Naturally:</strong> RoboLearn adapts to your child's interests, encouraging deeper exploration and reinforcing concepts through dialogue.</li>
-          </ol>
-        </div>
-
-        <!-- Educational Benefits Section -->
-        <div class="max-w-3xl mx-auto mb-12">
-          <h2 class="text-2xl font-semibold mb-6">Spark Curiosity, Build Knowledge</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-            <div class="benefit-card">
-              <h3 class="font-semibold text-text-primary mb-2">Develops Critical Thinking</h3>
-              <p class="text-text-secondary text-sm">Encourages children to ask 'why' and 'how,' fostering deeper understanding beyond rote memorization. Example: Explaining gravity not just as a fact, but through relatable scenarios.</p>
-            </div>
-            <div class="benefit-card">
-              <h3 class="font-semibold text-text-primary mb-2">Expands Vocabulary & Communication</h3>
-              <p class="text-text-secondary text-sm">Introduces new words and concepts naturally within conversations, improving language skills. Example: Defining scientific terms like 'photosynthesis' in simple language.</p>
-            </div>
-            <div class="benefit-card">
-              <h3 class="font-semibold text-text-primary mb-2">Boosts STEM Confidence</h3>
-              <p class="text-text-secondary text-sm">Makes complex topics like space, biology, and technology accessible and exciting through interactive explanations. Example: Simulating a conversation about how rockets reach space.</p>
-            </div>
-            <div class="benefit-card">
-              <h3 class="font-semibold text-text-primary mb-2">Supports Self-Directed Learning</h3>
-              <p class="text-text-secondary text-sm">Empowers children to follow their own interests and learn at their own pace, building intrinsic motivation. Example: Letting a child guide a conversation about dinosaurs for as long as they wish.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Enhanced CTA Section -->
-        <div class="max-w-xl mx-auto mb-8">
-          <div class="bg-background-lighter/50 backdrop-blur-sm rounded-xl p-6 border border-border-primary">
-            <p class="text-cyan-400 font-semibold mb-4">🚀 Join the Waitlist & Shape the Future</p>
-            <div class="flex justify-center space-x-2 mb-4">
-              <div class="flex items-center space-x-2 text-text-secondary">
-                <span class="inline-block w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-                <span class="text-sm">247 spots remaining</span>
-              </div>
-              <span class="text-text-secondary">•</span>
-              <div class="text-text-secondary text-sm">
-                1,753 parents joined
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a href="/waitlist" class="btn-primary group relative overflow-hidden">
-            <div class="absolute inset-0 bg-cyan-400/20 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-            <span class="relative flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Join the Waitlist Now
-            </span>
-          </a>
-          <a href="/features" class="btn-secondary">
-            Explore Features
-          </a>
-        </div>
-
-        <!-- Benefits -->
-        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-sm">
-          <div class="flex items-center justify-center space-x-2 text-text-secondary">
-            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Clock icon indicating duration benefit">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>3 months free access</span>
-          </div>
-          <div class="flex items-center justify-center space-x-2 text-text-secondary">
-            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Sparkle icon indicating feature access benefit">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-            <span>Priority features access</span>
-          </div>
-          <div class="flex items-center justify-center space-x-2 text-text-secondary">
-            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Briefcase icon indicating exclusive activities benefit">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>
-            <span>Exclusive STEM activities</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- App Preview -->
-      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Mobile Preview -->
-        <div class="order-2 lg:order-1">
-          <MobilePreview robotName="Astro" question="Why do planes fly?" isAnswering={true} />
-        </div>
-
-        <!-- Feature Steps -->
-        <div class="order-1 lg:order-2">
-          <div class="card">
-            <!-- Progress indicator -->
-            <div class="flex justify-center mb-8">
-              {#each Array(totalSteps) as _, i}
-                <div class="flex items-center">
-                  <div class="progress-dot {i + 1 <= currentStep ? 'progress-dot-active' : 'progress-dot-inactive'}"></div>
-                  {#if i < totalSteps - 1}
-                    <div class="progress-line {i + 1 < currentStep ? 'progress-line-active' : 'progress-line-inactive'}"></div>
-                  {/if}
-                </div>
-              {/each}
-            </div>
-
-            <!-- Step content -->
-            <div class="text-center mb-8">
-              <h2 class="text-2xl font-bold mb-4">
-                {steps[currentStep - 1].title}
-              </h2>
-              <p class="text-text-secondary">
-                {steps[currentStep - 1].description}
-              </p>
-            </div>
-
-            <!-- Navigation buttons -->
-            <div class="flex justify-between">
-              <button
-                class="btn-secondary {currentStep === 1 ? 'opacity-50 cursor-not-allowed' : ''}"
-                on:click={prevStep}
-                disabled={currentStep === 1}
-              >
-                Back
-              </button>
-              <button
-                class="btn-primary {currentStep === totalSteps ? 'opacity-50 cursor-not-allowed' : ''}"
-                on:click={nextStep}
-                disabled={currentStep === totalSteps}
-              >
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Voice Demo Section -->
-      <div class="mt-24 max-w-2xl mx-auto">
-        <VoiceDemo />
+    <div class="z-10 relative">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        Join the Future <br class="hidden md:block" /> of Child Learning
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+        Be among the first to give your child access to a personalized AI learning companion that makes education fun and engaging.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="/waitlist" class="btn-primary">
+          Join the Waitlist Now
+        </a>
+        <a href="/demo" class="btn-secondary">
+          Try Voice Demo
+        </a>
       </div>
     </div>
   </section>
+
+  <!-- Trust Elements Section -->
+  <section class="py-12 bg-background-light border-y border-border-primary" aria-labelledby="trust-heading">
+    <h2 id="trust-heading" class="sr-only">Trust and Credibility Indicators</h2> <!-- Screen reader heading -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
+         <!-- Placeholder 1: As Featured In -->
+         <div class="text-center w-full">
+           <p class="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Featured In</p>
+           <!-- Replace with actual logo(s) -->
+           <div class="h-8 bg-background-lighter rounded w-24 mx-auto flex items-center justify-center border border-border-primary">
+             <span class="text-xs text-text-secondary">Logo</span>
+           </div>
+         </div>
+         <!-- Placeholder 2: Partnerships -->
+         <div class="text-center w-full">
+           <p class="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Partners</p>
+           <!-- Replace with actual logo(s) -->
+           <div class="h-8 bg-background-lighter rounded w-24 mx-auto flex items-center justify-center border border-border-primary">
+             <span class="text-xs text-text-secondary">Logo</span>
+           </div>
+         </div>
+          <!-- Placeholder 3: Safety Certified -->
+         <div class="text-center w-full">
+           <p class="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Safety</p>
+           <!-- Replace with actual badge/certification -->
+           <div class="h-8 bg-background-lighter rounded w-24 mx-auto flex items-center justify-center border border-border-primary">
+             <Icon icon="mdi:shield-check-outline" class="w-5 h-5 text-cyan-400" />
+           </div>
+         </div>
+          <!-- Placeholder 4: Testimonial Preview -->
+         <div class="text-center w-full">
+            <p class="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Parents Love It</p>
+            <!-- Replace with actual short testimonial -->
+           <p class="text-xs text-text-secondary italic">"Incredible!"</p>
+         </div>
+          <!-- Placeholder 5: Built By Experts -->
+         <div class="text-center w-full hidden lg:block">
+           <p class="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Expert Built</p>
+           <p class="text-xs text-text-secondary">By Parents & Educators</p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How RoboLearn Works Section (Timeline Style) -->
+  <section id="how-it-works" class="py-20 md:py-28 bg-background">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="text-center mb-16">
+           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">How RoboLearn Sparks Curiosity</h2>
+           <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+               Engage your child's natural desire to learn through simple voice interactions and safe, AI-powered conversations.
+           </p>
+       </div>
+
+       <ol class="relative border-l-2 border-border-primary/50 ml-4">
+         <!-- Step 1 -->
+         <li class="mb-10 ml-10">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-400/20 rounded-full -left-4 ring-4 ring-background border border-cyan-400/50">
+              <Icon icon="mdi:microphone-question" class="w-5 h-5 text-cyan-400" />
+            </span>
+            <h3 class="text-xl font-semibold text-text-primary mb-1">Ask Anything</h3>
+            <p class="text-base font-normal text-text-secondary">Your child uses simple voice commands to ask questions about any topic they're curious about, from dinosaurs to distant stars.</p>
+         </li>
+         <!-- Step 2 -->
+         <li class="mb-10 ml-10">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-400/20 rounded-full -left-4 ring-4 ring-background border border-cyan-400/50">
+              <Icon icon="mdi:robot-happy-outline" class="w-5 h-5 text-cyan-400" />
+            </span>
+            <h3 class="text-xl font-semibold text-text-primary mb-1">Engaging Conversations</h3>
+            <p class="text-base font-normal text-text-secondary">Our AI companion provides age-appropriate, informative answers in a friendly, conversational style, adapting to their understanding.</p>
+         </li>
+         <!-- Step 3 -->
+          <li class="mb-10 ml-10">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-400/20 rounded-full -left-4 ring-4 ring-background border border-cyan-400/50">
+              <Icon icon="mdi:shield-check-outline" class="w-5 h-5 text-cyan-400" />
+            </span>
+            <h3 class="text-xl font-semibold text-text-primary mb-1">Safe Exploration</h3>
+            <p class="text-base font-normal text-text-secondary">Content is carefully curated and filtered for safety, allowing children to explore freely within secure boundaries.</p>
+         </li>
+         <!-- Step 4 -->
+         <li class="ml-10">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-400/20 rounded-full -left-4 ring-4 ring-background border border-cyan-400/50">
+              <Icon icon="mdi:leaf-maple" class="w-5 h-5 text-cyan-400" />
+            </span>
+            <h3 class="text-xl font-semibold text-text-primary mb-1">Learning Naturally</h3>
+            <p class="text-base font-normal text-text-secondary">RoboLearn adapts to your child's interests, encouraging deeper exploration and reinforcing concepts through dialogue.</p>
+         </li>
+       </ol>
+     </div>
+   </section>
+
+  <!-- App Preview Section -->
+  <section class="py-16 md:py-24 bg-background">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Mobile Preview -->
+        <div class="order-2 lg:order-1 flex justify-center">
+            <MobilePreview robotName="Astro" question="Why do planes fly?" voiceState={'responding'} />
+        </div>
+
+        <!-- {/* Placeholder for potential future content in the right column */} -->
+        <div class="order-1 lg:order-2 flex flex-col items-center justify-center text-center lg:text-left lg:items-start">
+            <!-- {/* Example content for this area */}  -->
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">See RoboLearn in Action</h2>
+            <p class="text-lg text-text-secondary mb-8 max-w-md">
+                 Experience the intuitive voice interface and engaging learning conversations firsthand.
+            </p>
+            <a href="/features" class="btn-secondary inline-flex items-center hover:border-cyan-400 hover:text-cyan-400">
+                <Icon icon="mdi:view-list-outline" class="w-5 h-5 mr-2" />
+                Explore All Features
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Educational Benefits Section -->
+  <section class="py-20 md:py-28 bg-background-light">
+     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">Spark Curiosity, Build Knowledge</h2>
+            <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                Go beyond facts and foster essential skills for lifelong learning.
+            </p>
+        </div>
+
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+         <!-- Benefit Card 1: Critical Thinking -->
+         <div class="benefit-card flex space-x-6 items-start">
+           <div class="flex-shrink-0">
+             <!-- Icon representing the benefit -->
+             <div class="w-16 h-16 rounded-lg bg-cyan-400/10 flex items-center justify-center border border-cyan-400/30">
+                <Icon icon="mdi:brain" class="w-8 h-8 text-cyan-400" />
+             </div>
+           </div>
+           <div>
+             <h3 class="font-semibold text-xl text-text-primary mb-2">Develops Critical Thinking</h3>
+             <p class="text-text-secondary text-base min-h-[4rem]">Encourages asking 'why' and 'how,' fostering deeper understanding beyond rote memorization. Example: Explaining gravity through relatable scenarios.</p>
+           </div>
+         </div>
+         <!-- Benefit Card 2: Communication -->
+         <div class="benefit-card flex space-x-6 items-start">
+            <div class="flex-shrink-0">
+             <!-- Icon representing the benefit -->
+             <div class="w-16 h-16 rounded-lg bg-cyan-400/10 flex items-center justify-center border border-cyan-400/30">
+                 <Icon icon="mdi:account-voice" class="w-8 h-8 text-cyan-400" />
+             </div>
+           </div>
+           <div>
+             <h3 class="font-semibold text-xl text-text-primary mb-2">Expands Vocabulary & Communication</h3>
+             <p class="text-text-secondary text-base min-h-[4rem]">Introduces new words and concepts naturally within conversations, improving language skills. Example: Defining 'photosynthesis' simply.</p>
+           </div>
+         </div>
+         <!-- Benefit Card 3: STEM Confidence -->
+         <div class="benefit-card flex space-x-6 items-start">
+             <div class="flex-shrink-0">
+             <!-- Icon representing the benefit -->
+             <div class="w-16 h-16 rounded-lg bg-cyan-400/10 flex items-center justify-center border border-cyan-400/30">
+                 <Icon icon="mdi:rocket-launch-outline" class="w-8 h-8 text-cyan-400" />
+             </div>
+           </div>
+           <div>
+             <h3 class="font-semibold text-xl text-text-primary mb-2">Boosts STEM Confidence</h3>
+             <p class="text-text-secondary text-base min-h-[4rem]">Makes complex topics like space and biology accessible and exciting through interactive explanations. Example: Simulating conversations about space travel.</p>
+           </div>
+         </div>
+         <!-- Benefit Card 4: Self-Directed Learning -->
+         <div class="benefit-card flex space-x-6 items-start">
+            <div class="flex-shrink-0">
+             <!-- Icon representing the benefit -->
+             <div class="w-16 h-16 rounded-lg bg-cyan-400/10 flex items-center justify-center border border-cyan-400/30">
+                 <Icon icon="mdi:lightbulb-on-outline" class="w-8 h-8 text-cyan-400" />
+             </div>
+           </div>
+           <div>
+             <h3 class="font-semibold text-xl text-text-primary mb-2">Supports Self-Directed Learning</h3>
+             <p class="text-text-secondary text-base min-h-[4rem]">Empowers children to follow their own interests and learn at their own pace, building intrinsic motivation. Example: Letting a child lead a long chat about dinosaurs.</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+  <!-- Voice Demo Section -->
+  <section class="py-16 md:py-24 bg-background-light">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">Hear the Difference</h2>
+        <p class="text-lg text-text-secondary mb-12 max-w-xl mx-auto">
+           Listen to a sample interaction and imagine your child engaging with RoboLearn.
+        </p>
+        <VoiceDemo />
+    </div>
+  </section>
+
 </div> 
+
+<style lang="postcss">
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500;
+  }
+  .benefit-card {
+      @apply bg-background-lighter/30 rounded-lg p-6 transition-all duration-300 border border-border-primary/50 hover:border-cyan-400/50;
+  }
+  .benefit-card:hover {
+      box-shadow: 0 0 15px 5px rgba(0, 209, 255, 0.2);
+  }
+  .card {
+    @apply bg-background-lighter rounded-xl p-6 border border-border-primary shadow-lg;
+  }
+  .progress-dot {
+    @apply w-3 h-3 rounded-full mx-1 transition-colors duration-300;
+  }
+  .progress-dot-active {
+    @apply bg-cyan-400;
+  }
+  .progress-dot-inactive {
+    @apply bg-border-primary;
+  }
+  .progress-line {
+    @apply h-0.5 w-8 transition-colors duration-300;
+  }
+  .progress-line-active {
+    @apply bg-cyan-400;
+  }
+  .progress-line-inactive {
+    @apply bg-border-primary;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-cyan-500 text-background font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform shadow-lg text-center;
+  }
+  .btn-primary:hover {
+    background-color: theme('colors.cyan.600');
+    transform: translateY(-0.25rem);
+    box-shadow: theme('boxShadow.lg'), 0 0 15px 5px rgba(0, 209, 255, 0.2);
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-border-primary text-text-primary font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out text-center;
+  }
+  .btn-secondary:hover {
+    border-color: theme('colors.cyan.400');
+    color: theme('colors.cyan.400');
+  }
+</style> 

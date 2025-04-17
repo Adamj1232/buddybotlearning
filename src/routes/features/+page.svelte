@@ -470,14 +470,12 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="py-20 px-4 md:px-8 lg:px-16">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Learning?</h2>
-      <p class="text-xl text-gray-300 mb-8">
-        Join our waitlist to be among the first to experience the future of children's education.
-      </p>
+  <section class="bg-gradient-to-r from-[#00D1FF] to-[#73CBFF] py-16 px-4 md:px-8 lg:px-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#171923] mb-6">Ready to Shape the Future of Learning?</h2>
+      <p class="text-xl text-[#171923]/80 mb-8">Join our waitlist to be among the first to experience the future of children's education.</p>
       <button 
-        class="bg-[#00D1FF] text-[#171923] px-8 py-3 rounded-lg font-semibold hover:brightness-110 transition-all duration-300"
+        class="bg-[#171923] text-[#00D1FF] px-8 py-3 rounded-lg font-semibold hover:brightness-110 transition-all duration-300"
         aria-label="Join the RoboLearn waitlist"
       >
         Join the Waitlist
