@@ -1,0 +1,21 @@
+{
+	"mcpServers": {
+		"mcp-svelte-docs": {
+			"command": "node",
+			"args": ["/Users/adamcarpenter/blocknative/mcp-svelte-docs/dist/index.js"],
+			"env": {
+				"DEBUG": "false"
+			},
+			"disabled": false,
+			"autoApprove": ["svelte_pattern", "svelte5_feature", "svelte5_common_mistakes"]
+		},
+		"filesystem": {
+			"command": "npx",
+			"args": [
+			  "-y",
+			  "@modelcontextprotocol/server-filesystem",
+			  "/Users/adamcarpenter/blocknative/gas-net-game-dapp"
+			]
+		  }
+	}
+}
