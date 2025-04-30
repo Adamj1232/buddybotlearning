@@ -82,7 +82,7 @@
       <!-- Robot Avatar -->
       <div class="flex justify-center mb-6">
         <div class="relative">
-          <div class="w-24 h-24 rounded-full bg-accent-primary shadow-glow flex items-center justify-center transition-all duration-300
+          <div class="w-24 h-24 rounded-full bg-accent shadow-glow flex items-center justify-center transition-all duration-300
             {currentExpression.animation === 'pulse' ? 'animate-pulse' : ''}
             {currentExpression.animation === 'bounce' ? 'animate-bounce' : ''}
             {currentExpression.animation === 'wave' ? 'animate-wave' : ''}"
@@ -109,7 +109,7 @@
       <div class="space-y-4">
         <!-- Question -->
         <div class="flex justify-end">
-          <div class="bg-accent-primary rounded-2xl rounded-tr-sm px-4 py-2 max-w-[80%] transform transition-all duration-300 hover:scale-[1.02]">
+          <div class="bg-accent rounded-2xl rounded-tr-sm px-4 py-2 max-w-[80%] transform transition-all duration-300 hover:scale-[1.02]">
             <p class="text-white">{question}</p>
           </div>
         </div>
@@ -171,7 +171,7 @@
   }
 
   .voice-input-btn {
-    @apply p-4 rounded-full bg-accent-primary shadow-glow;
+    @apply p-4 rounded-full bg-accent shadow-glow;
     transition: all 0.3s ease;
   }
 

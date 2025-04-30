@@ -1,11 +1,10 @@
-// import type { LayoutLoad } from '$types'; // Reverted type import for now
+import type { LayoutLoad } from './$types';
 
 export const prerender = true;
 export const ssr = false;
 export const csr = true;
 
-// Using any temporarily due to type resolution issues
-export const load = ({ url }: { url: URL }) => {
+export const load: LayoutLoad = ({ url }) => {
   return {
     url: url.pathname
   };

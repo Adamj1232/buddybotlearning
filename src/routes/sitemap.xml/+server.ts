@@ -1,54 +1,83 @@
-// import type { RequestHandler } from './$types'; // Reverted type import for now
+import type { RequestHandler } from '@sveltejs/kit';
 
 // Adjust this base URL to your production environment
-const siteUrl = 'https://www.robolearn.ai';
+const BASE_URL = 'https://robolearn.ai';
 
-// List of static pages (add any new top-level routes here)
-const staticPages = [
-  '/',
-  '/waitlist',
-  '/safety',
-  '/support',
-  '/terms',
-  '/pricing',
-  '/privacy',
-  '/blog',
-  '/docs',
-  '/for-parents',
-  '/features',
-  '/how-it-works',
-  '/about'
+const pages = [
+  {
+    path: '/',
+    priority: 1.0,
+    changefreq: 'daily'
+  },
+  {
+    path: '/about',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    path: '/features',
+    priority: 0.9,
+    changefreq: 'weekly'
+  },
+  {
+    path: '/how-it-works',
+    priority: 0.9,
+    changefreq: 'weekly'
+  },
+  {
+    path: '/waitlist',
+    priority: 1.0,
+    changefreq: 'daily'
+  },
+  {
+    path: '/privacy',
+    priority: 0.6,
+    changefreq: 'monthly'
+  },
+  {
+    path: '/terms',
+    priority: 0.6,
+    changefreq: 'monthly'
+  },
+  {
+    path: '/safety',
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  {
+    path: '/faq',
+    priority: 0.8,
+    changefreq: 'weekly'
+  }
 ];
 
 // You might need to fetch dynamic routes (e.g., blog posts) here in a real app
 // const dynamicPages = await fetchDynamicBlogPosts(); 
 
 // Using general type for RequestHandler
-export const GET = async (): Promise<Response> => {
-  const headers = {
-    'Cache-Control': 'max-age=0, s-maxage=3600', // Cache for 1 hour
-    'Content-Type': 'application/xml'
-  };
-
-  const sitemapEntries = staticPages.map(page => `
+export const GET: RequestHandler = async () => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${pages
+    .map(
+      (page) => `
     <url>
-      <loc>${siteUrl}${page}</loc>
-      <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> 
-      <changefreq>weekly</changefreq> 
-      <priority>${page === '/' ? '1.0' : '0.7'}</priority> 
-    </url>`).join('');
-
-  // Add dynamic page entries here if applicable
-
-  const sitemap = `<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
-<urlset
-  xmlns=\"https://www.sitemaps.org/schemas/sitemap/0.9\"
-  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-  xsi:schemaLocation=\"https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">
-  ${sitemapEntries}
+      <loc>${BASE_URL}${page.path}</loc>
+      <changefreq>${page.changefreq}</changefreq>
+      <priority>${page.priority}</priority>
+      <lastmod>${new Date().toISOString()}</lastmod>
+    </url>
+  `
+    )
+    .join('')}
 </urlset>`;
 
-  return new Response(sitemap, { headers });
+  return new Response(sitemap, {
+    headers: {
+      'Content-Type': 'application/xml',
+      'Cache-Control': 'public, max-age=3600'
+    }
+  });
 };
 
 // Ensure this endpoint is prerendered if your site is fully static

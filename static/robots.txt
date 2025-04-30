@@ -2,5 +2,11 @@
 User-agent: *
 Allow: /
 
-# Sitemap location (adjust URL if needed)
-Sitemap: https://www.robolearn.ai/sitemap.xml 
+# Sitemap
+Sitemap: https://robolearn.ai/sitemap.xml
+
+# Disallow development and internal paths
+Disallow: /.svelte-kit/
+Disallow: /node_modules/
+Disallow: /.cursor/
+Disallow: /.git/ 

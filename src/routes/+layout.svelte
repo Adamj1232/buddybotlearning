@@ -1,7 +1,6 @@
 <script lang="ts">
   import '../app.css';
-  import Navigation from '../components/Navigation.svelte';
-  import Footer from '$lib/components/Footer.svelte';
+  import PageLayout from '$lib/components/layout/PageLayout.svelte';
   import WaitlistModal from '../components/WaitlistModal.svelte';
   // import type { LayoutData } from './$types'; // Reverted again due to type resolution issues
   // Explicitly defining type for data
@@ -102,11 +101,8 @@
   Skip to main content
 </a>
 
-<Navigation />
-
-<main id="main-content" class="pt-16">
+<PageLayout>
   <slot />
-</main>
+</PageLayout>
 
-<Footer />
 <WaitlistModal /> 

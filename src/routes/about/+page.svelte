@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
+  import Container from '$lib/components/layout/Container.svelte';
+  import Section from '$lib/components/layout/Section.svelte';
+  import WaitlistForm from '../../components/WaitlistForm.svelte';
 
   interface TeamMember {
     name: string;
@@ -63,7 +66,10 @@
 
 <svelte:head>
   <title>About RoboLearn - Our Vision & Educational Approach</title>
-  <meta name="description" content="Learn about RoboLearn's mission, educational philosophy focused on conversational AI, and the team building a safe, engaging learning companion for children." />
+  <meta 
+    name="description" 
+    content="Learn about RoboLearn's mission to make learning engaging and accessible for children through AI-powered conversations. Also includes structured data about our educational approach."
+  />
   <script type="application/ld+json">
     {
       JSON.stringify([
@@ -224,20 +230,6 @@
          <p class="text-sm text-cyan-400">- Placeholder Name, Child Development Expert</p>
       </div>
 
-      <!-- <div class="age-adaptability grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-        <div class="adaptability-card">
-          <h3 class="text-xl font-bold text-cyan-400 mb-4">Ages 4-6</h3>
-          <p class="text-text-secondary">Simple, concrete explanations with relatable examples from daily life</p>
-        </div>
-        <div class="adaptability-card">
-          <h3 class="text-xl font-bold text-cyan-400 mb-4">Ages 7-9</h3>
-          <p class="text-text-secondary">More detailed explanations with basic scientific concepts</p>
-        </div>
-        <div class="adaptability-card">
-          <h3 class="text-xl font-bold text-cyan-400 mb-4">Ages 10-12</h3>
-          <p class="text-text-secondary">Complex concepts with real-world applications and deeper exploration</p>
-        </div>
-      </div> -->
     </div>
   </section>
 

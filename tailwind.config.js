@@ -6,44 +6,70 @@ export default {
       colors: {
         background: {
           DEFAULT: '#171923',
-          light: '#1A202C',
-          lighter: '#2D3748'
+          surface: '#1E2130',
+          light: '#1E2130',
+          lighter: '#252A3D'
         },
         accent: {
-          primary: '#00D1FF',
+          DEFAULT: '#00D1FF',
           hover: '#33DAFF',
           muted: '#0099CC'
         },
         text: {
           primary: '#FFFFFF',
-          secondary: '#A0AEC0',
-          muted: '#718096'
+          secondary: '#E5E7EB',
+          tertiary: '#9CA3AF'
+        },
+        status: {
+          success: '#4ADE80',
+          warning: '#FACC15',
+          error: '#F87171'
         },
         border: {
-          primary: '#2D3748',
+          DEFAULT: 'rgba(255, 255, 255, 0.1)',
           accent: '#00D1FF'
-        },
-        success: {
-          DEFAULT: '#48BB78',
-          light: '#68D391'
-        },
-        error: {
-          DEFAULT: '#F56565',
-          light: '#FC8181'
         }
       },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif']
+      },
+      fontSize: {
+        'display': ['3rem', { lineHeight: '1.2' }],
+        'h1': ['2rem', { lineHeight: '1.25' }],
+        'h2': ['1.5rem', { lineHeight: '1.3' }],
+        'h3': ['1.25rem', { lineHeight: '1.4' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.5' }],
+        'body': ['1rem', { lineHeight: '1.5' }],
+        'small': ['0.875rem', { lineHeight: '1.4' }],
+        'micro': ['0.75rem', { lineHeight: '1.3' }]
+      },
+      spacing: {
+        'xs': '4px',
+        'sm': '8px',
+        'md': '16px',
+        'lg': '24px',
+        'xl': '32px',
+        '2xl': '48px',
+        '3xl': '64px'
+      },
       boxShadow: {
+        'card': '0 4px 16px rgba(0, 0, 0, 0.2)',
         'glow': '0 0 15px rgba(0, 209, 255, 0.3)',
-        'glow-hover': '0 0 20px rgba(0, 209, 255, 0.5)',
-        'glow-strong': '0 0 30px rgba(0, 209, 255, 0.4)',
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+        'glow-hover': '0 0 20px rgba(0, 209, 255, 0.5)'
       },
       borderRadius: {
-        'xl': '1rem',
-        '2xl': '1.5rem'
+        'DEFAULT': '6px',
+        'card': '8px'
       },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+      container: {
+        center: true,
+        padding: '1rem',
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1200px'
+        }
       },
       backdropBlur: {
         'xs': '2px'

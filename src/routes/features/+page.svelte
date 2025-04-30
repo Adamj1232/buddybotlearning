@@ -1,8 +1,11 @@
 <script lang="ts">
-  import { inview } from 'svelte-inview';
   import { onMount } from 'svelte';
   import VoiceDemo from '../../components/VoiceDemo.svelte';
   import MobilePreview from '../../components/MobilePreview.svelte';
+  import Container from '$lib/components/layout/Container.svelte';
+  import Section from '$lib/components/layout/Section.svelte';
+  import StatusBadge from '$lib/components/status/StatusBadge.svelte';
+  import WaitlistForm from '../../components/WaitlistForm.svelte';
   
   let activeFeature = '';
   let activeTechSpec = '';
@@ -198,309 +201,207 @@
     return () => clearInterval(interval);
   });
 
-  function handleIntersect(e: CustomEvent<{ inView: boolean; entry: IntersectionObserverEntry }>) {
-    if (e.detail.inView) {
-      const target = e.detail.entry.target as HTMLElement;
-      target.classList.add('is-visible');
-    }
-  }
-
   $: currentSubject = stemSubjects.find(s => s.id === activeSubject) ?? stemSubjects[0];
 </script>
 
-<div class="min-h-screen bg-[#171923] text-white">
-  <!-- Hero Section -->
-  <section class="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12" use:inview on:inview_change={handleIntersect}>
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#00D1FF] to-[#73CBFF] bg-clip-text text-transparent">
-          Cutting-Edge Features for Natural Learning
-        </h1>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-          Discover how our AI companion makes learning an engaging, natural conversation for your child.
-        </p>
-      </div>
+<svelte:head>
+  <title>Features - RoboLearn</title>
+  <meta 
+    name="description" 
+    content="Discover RoboLearn's innovative features designed to make learning engaging and effective for children through AI-powered conversations."
+  />
+</svelte:head>
+
+<!-- Hero Section -->
+<Section spacing="xl">
+  <Container>
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <h1 class="text-display font-semibold">
+        Features That Make Learning
+        <span class="text-accent">Fun</span>
+      </h1>
+      <p class="text-body-lg">
+        RoboLearn combines cutting-edge AI technology with proven educational principles to create
+        an engaging learning experience that children love.
+      </p>
     </div>
-  </section>
+  </Container>
+</Section>
 
-  <!-- Add Feature Spotlight section after Hero -->
-  <section class="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-[#171923] to-[#1E2130]">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12" use:inview on:inview_change={handleIntersect}>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Feature Spotlight</h2>
-        <div class="relative h-[200px] overflow-hidden">
-          {#each spotlightFeatures as feature, i}
-            <div 
-              class="absolute w-full transition-all duration-500 transform"
-              style="opacity: {i === spotlightIndex ? '1' : '0'}; 
-                     transform: translateY({i === spotlightIndex ? '0' : '20px'})">
-              <div class="bg-[#171923] p-8 rounded-xl border border-[#00D1FF]/20 shadow-glow">
-                <span class="text-3xl mb-4 block">{feature.icon}</span>
-                <h3 class="text-xl font-bold text-[#00D1FF] mb-2">{feature.title}</h3>
-                <p class="text-gray-300 mb-4">{feature.description}</p>
-                <p class="text-sm text-[#00D1FF]">{feature.stats}</p>
-              </div>
-            </div>
-          {/each}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Voice Interaction Section -->
-  <section class="py-16 px-4 md:px-8 lg:px-16 bg-[#1E2130]">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-8">
-          <h2 class="text-3xl md:text-4xl font-bold">Voice Interaction</h2>
-          <p class="text-xl text-gray-300">
-            Natural conversations powered by advanced AI, designed specifically for children's voices and learning patterns.
-          </p>
-          
-          <div class="grid sm:grid-cols-2 gap-4">
-            {#each voiceFeatures as feature}
-              <button
-                class="bg-[#171923] p-6 rounded-xl border border-[#00D1FF]/20 hover:border-[#00D1FF] transition-all duration-300
-                       {activeFeature === feature.id ? 'border-[#00D1FF] shadow-glow' : ''}"
-                on:click={() => activeFeature = feature.id}
-                use:inview
-                on:inview_change={handleIntersect}
-              >
-                <span class="text-2xl mb-3 block">{feature.icon}</span>
-                <h3 class="text-lg font-semibold text-[#00D1FF] mb-2">{feature.title}</h3>
-                <p class="text-gray-300 text-sm">{feature.description}</p>
-              </button>
-            {/each}
-          </div>
-        </div>
-
-        <div class="relative">
-          <VoiceDemo />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Adaptive Learning Section -->
-  <section class="py-16 px-4 md:px-8 lg:px-16">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="order-2 lg:order-1">
-          <MobilePreview 
-            robotName="Astro"
-            question="Why is the sky blue?"
-            answer={activeFeature === 'age-appropriate' 
-              ? "The sky looks blue because sunlight bounces off tiny bits in the air, like when you shine a flashlight through water!" 
-              : "The sky appears blue due to a phenomenon called Rayleigh scattering, where sunlight interacts with air molecules, scattering blue wavelengths more than others."}
-            voiceState="responding"
-            isAnswering={false}
-          />
-        </div>
-
-        <div class="space-y-8 order-1 lg:order-2">
-          <h2 class="text-3xl md:text-4xl font-bold">Adaptive Learning</h2>
-          <p class="text-xl text-gray-300">
-            An AI that grows with your child, providing increasingly sophisticated explanations as their understanding deepens.
-          </p>
-          
-          <div class="grid sm:grid-cols-2 gap-4">
-            {#each adaptiveFeatures as feature}
-              <button
-                class="bg-[#1E2130] p-6 rounded-xl border border-[#00D1FF]/20 hover:border-[#00D1FF] transition-all duration-300
-                       {activeFeature === feature.id ? 'border-[#00D1FF] shadow-glow' : ''}"
-                on:click={() => activeFeature = feature.id}
-                use:inview
-                on:inview_change={handleIntersect}
-              >
-                <span class="text-2xl mb-3 block">{feature.icon}</span>
-                <h3 class="text-lg font-semibold text-[#00D1FF] mb-2">{feature.title}</h3>
-                <p class="text-gray-300 text-sm">{feature.description}</p>
-              </button>
-            {/each}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STEM Content Excellence -->
-  <section class="py-16 px-4 md:px-8 lg:px-16 bg-[#1E2130]">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">STEM Content Excellence</h2>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-          Explore a world of knowledge through age-appropriate explanations of complex concepts.
+<!-- Core Features -->
+<Section spacing="xl" class_name="bg-background-surface border-y border-border">
+  <Container>
+    <div class="space-y-16">
+      <div class="text-center space-y-4">
+        <h2 class="text-h2">Core Features</h2>
+        <p class="text-body-lg max-w-2xl mx-auto">
+          Every feature is designed with children's natural learning patterns in mind.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-8">
-        <!-- Subject Selection -->
-        <div class="space-y-4">
-          {#each stemSubjects as subject}
-            <button
-              class="w-full text-left p-4 rounded-xl border transition-all duration-300
-                     {activeSubject === subject.id 
-                       ? 'bg-[#171923] border-[#00D1FF] shadow-glow' 
-                       : 'bg-[#171923]/50 border-[#00D1FF]/20 hover:border-[#00D1FF]/50'}"
-              on:click={() => activeSubject = subject.id}
-            >
-              <div class="flex items-center space-x-3">
-                <span class="text-2xl">{subject.icon}</span>
-                <div>
-                  <h3 class="font-semibold text-[#00D1FF]">{subject.title}</h3>
-                  <p class="text-sm text-gray-300">{subject.description}</p>
-                </div>
-              </div>
-            </button>
-          {/each}
-        </div>
-
-        <!-- Example Questions -->
-        <div class="lg:col-span-2 bg-[#171923] rounded-xl p-6 border border-[#00D1FF]/20">
-          <h3 class="text-xl font-semibold mb-6 flex items-center">
-            <span class="text-2xl mr-3">{currentSubject.icon}</span>
-            {currentSubject.title} Examples
-          </h3>
-          <div class="space-y-4">
-            {#each currentSubject.examples as example}
-              <div class="p-4 bg-[#1E2130] rounded-lg">
-                <div class="flex justify-between items-start mb-2">
-                  <p class="text-[#00D1FF] font-medium">{example.question}</p>
-                  <span class="text-sm text-gray-300">Age {example.age}+</span>
-                </div>
-                <MobilePreview 
-                  robotName="Astro"
-                  question={example.question}
-                  answer="Loading personalized response..."
-                  voiceState="processing"
-                  isAnswering={false}
-                />
-              </div>
-            {/each}
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="card space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-h3">Voice Interaction</h3>
+            <StatusBadge type="coming-soon" />
           </div>
+          <p>Natural voice conversations make learning accessible for children of all ages and reading levels.</p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Natural language understanding
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Age-appropriate responses
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Multiple voice options
+            </li>
+          </ul>
         </div>
-      </div>
 
-      <!-- Add cross-selling links in STEM Content Excellence section -->
-      <div class="mt-6 p-4 bg-[#171923]/50 rounded-lg border border-[#00D1FF]/20">
-        <h4 class="text-[#00D1FF] font-semibold mb-2">Related Features</h4>
-        <div class="flex flex-wrap gap-2">
-          <button 
-            class="px-3 py-1 text-sm rounded-full bg-[#171923] border border-[#00D1FF]/20 hover:border-[#00D1FF] transition-all duration-300"
-            on:click={() => activeFeature = 'voice-accuracy'}>
-            Voice Recognition
-          </button>
-          <button 
-            class="px-3 py-1 text-sm rounded-full bg-[#171923] border border-[#00D1FF]/20 hover:border-[#00D1FF] transition-all duration-300"
-            on:click={() => activeFeature = 'age-appropriate'}>
-            Age-Appropriate Learning
-          </button>
-          <button 
-            class="px-3 py-1 text-sm rounded-full bg-[#171923] border border-[#00D1FF]/20 hover:border-[#00D1FF] transition-all duration-300"
-            on:click={() => activeFeature = 'interest-based'}>
-            Interest-Based Content
-          </button>
+        <div class="card space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-h3">Personalized Learning</h3>
+            <StatusBadge type="coming-soon" />
+          </div>
+          <p>AI that adapts to each child's interests, knowledge level, and learning style.</p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Interest-based content
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Adaptive difficulty
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Progress tracking
+            </li>
+          </ul>
+        </div>
+
+        <div class="card space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-h3">STEM Focus</h3>
+            <StatusBadge type="coming-soon" />
+          </div>
+          <p>Strong emphasis on science, technology, engineering, and mathematics.</p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Real-world examples
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Interactive experiments
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Visual explanations
+            </li>
+          </ul>
+        </div>
+
+        <div class="card space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-h3">Parent Dashboard</h3>
+            <StatusBadge type="coming-soon" />
+          </div>
+          <p>Complete oversight and control over your child's learning journey.</p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Learning reports
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Content filters
+            </li>
+            <li class="flex items-center">
+              <span class="text-accent mr-2">✓</span>
+              Goal setting
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </Container>
+</Section>
 
-  <!-- Customization & Personalization -->
-  <section class="py-16 px-4 md:px-8 lg:px-16">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Customization & Personalization</h2>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-          Create the perfect learning companion that adapts to your child's unique needs.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {#each robotCustomizations as custom}
-          <div class="bg-[#1E2130] rounded-xl p-6 border border-[#00D1FF]/20 hover:border-[#00D1FF]/50 transition-all duration-300">
-            <h3 class="text-lg font-semibold text-[#00D1FF] mb-3">{custom.title}</h3>
-            <p class="text-sm text-gray-300 mb-4">{custom.description}</p>
-            <div class="space-y-2">
-              {#each custom.options as option}
-                <button 
-                  class="w-full p-2 text-sm rounded-lg border border-[#00D1FF]/20 hover:border-[#00D1FF] transition-all duration-300
-                         {activeFeature === `${custom.id}-${option}` ? 'bg-[#00D1FF]/10 border-[#00D1FF]' : 'bg-[#171923]'}"
-                  on:click={() => activeFeature = `${custom.id}-${option}`}
-                >
-                  {option}
-                </button>
-              {/each}
-            </div>
-          </div>
-        {/each}
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Specifications -->
-  <section class="py-16 px-4 md:px-8 lg:px-16 bg-[#1E2130]">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Technical Specifications</h2>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-          Built with cutting-edge technology to ensure a seamless learning experience.
+<!-- Safety Features -->
+<Section spacing="xl">
+  <Container>
+    <div class="space-y-12">
+      <div class="text-center space-y-4">
+        <h2 class="text-h2">Built with Safety in Mind</h2>
+        <p class="text-body-lg max-w-2xl mx-auto">
+          RoboLearn prioritizes your child's safety with comprehensive protection measures.
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        {#each techSpecs as spec}
-          <div 
-            class="bg-[#171923] rounded-xl p-6 border border-[#00D1FF]/20 hover:border-[#00D1FF]/50 transition-all duration-300"
-            use:inview
-            on:inview_change={handleIntersect}
-          >
-            <h3 class="text-lg font-semibold text-[#00D1FF] mb-4">{spec.title}</h3>
-            <div class="space-y-3">
-              {#each spec.specs as detail}
-                <div class="flex justify-between items-center">
-                  <span class="text-gray-300">{detail.name}</span>
-                  <span class="text-[#00D1FF] font-medium">{detail.value}</span>
-                </div>
-              {/each}
-            </div>
-          </div>
-        {/each}
+        <div class="card space-y-4">
+          <span class="text-4xl">🛡️</span>
+          <h3 class="text-h3">Content Filtering</h3>
+          <p>
+            Multi-layer content filtering ensures all responses are age-appropriate and safe.
+          </p>
+        </div>
+
+        <div class="card space-y-4">
+          <span class="text-4xl">👀</span>
+          <h3 class="text-h3">Parent Controls</h3>
+          <p>
+            Comprehensive controls let parents set boundaries and monitor activity.
+          </p>
+        </div>
+
+        <div class="card space-y-4">
+          <span class="text-4xl">🔒</span>
+          <h3 class="text-h3">Data Privacy</h3>
+          <p>
+            Industry-leading security measures protect your family's privacy.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
+  </Container>
+</Section>
 
-  <!-- Call to Action -->
-  <section class="bg-gradient-to-r from-[#00D1FF] to-[#73CBFF] py-16 px-4 md:px-8 lg:px-16">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#171923] mb-6">Ready to Shape the Future of Learning?</h2>
-      <p class="text-xl text-[#171923]/80 mb-8">Join our waitlist to be among the first to experience the future of children's education.</p>
-      <button 
-        class="bg-[#171923] text-[#00D1FF] px-8 py-3 rounded-lg font-semibold hover:brightness-110 transition-all duration-300"
-        aria-label="Join the RoboLearn waitlist"
-      >
-        Join the Waitlist
-      </button>
+<!-- Early Access Section -->
+<Section spacing="xl" class_name="bg-background-surface border-y border-border">
+  <Container max_width="lg">
+    <div class="space-y-12">
+      <div class="text-center space-y-4">
+        <h2 class="text-h2">Experience These Features First</h2>
+        <p class="text-body-lg max-w-2xl mx-auto">
+          Join our early access program to be among the first to try RoboLearn's innovative features
+          and help shape their development.
+        </p>
+      </div>
+
+      <div class="max-w-xl mx-auto">
+        <WaitlistForm />
+      </div>
     </div>
-  </section>
-</div>
+  </Container>
+</Section>
 
 <style>
-  :global(.is-visible) {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-
   button {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .shadow-glow {
     box-shadow: 0 0 20px rgba(0, 209, 255, 0.1);
   }
 
-  /* Add smooth gradient animation */
   @keyframes gradientFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
