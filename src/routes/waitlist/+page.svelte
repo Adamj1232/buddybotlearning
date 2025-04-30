@@ -7,30 +7,30 @@
 </script>
 
 <svelte:head>
-  <title>Join the RoboLearn Waitlist</title>
+  <title>Join the BuddyBotLearning Waitlist</title>
   <meta 
     name="description" 
-    content="Sign up for early access to RoboLearn, the AI learning companion for curious kids. Be the first to know when we launch!"
+    content="Sign up for early access to BuddyBot, the AI learning companion for curious kids. Be the first to know when we launch!"
   />
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Join Early Access - RoboLearn",
-      "description": "Join RoboLearn's early access program to be among the first to experience our voice-controlled AI learning companions for children.",
+      "name": "Join Early Access - BuddyBotLearning",
+      "description": "Join BuddyBotLearning's early access program to be among the first to experience our voice-controlled AI learning companions for children.",
       "offers": {
         "@type": "Offer",
         "availability": "PreOrder",
         "availabilityStarts": "2024-06-01",
-        "description": "Early access to RoboLearn's AI learning companion",
+        "description": "Early access to BuddyBot's AI learning companion",
         "seller": {
           "@type": "Organization",
-          "name": "RoboLearn"
+          "name": "BuddyBotLearning"
         }
       },
       "mainEntity": {
         "@type": "Product",
-        "name": "RoboLearn AI Learning Companion",
+        "name": "BuddyBot AI Learning Companion",
         "description": "Voice-controlled AI learning companion for children ages 4-12",
         "releaseDate": "2024-09-01",
         "applicationCategory": "EducationalApplication",
@@ -50,7 +50,7 @@
     <div class="text-center space-y-6">
       <h1 class="text-display font-semibold">
         Be the First to Explore with
-        <span class="text-accent">RoboLearn</span>
+        <span class="text-accent">BuddyBot</span>
       </h1>
       <p class="text-body-lg">
         Join our waitlist to get exclusive early access and updates on the development
@@ -75,7 +75,7 @@
       <WaitlistForm />
 
       <p class="text-center text-small text-text-tertiary">
-        We respect your privacy. Your email will only be used for RoboLearn updates.
+        We respect your privacy. Your email will only be used for BuddyBotLearning updates.
         Read our <a href="/privacy" class="text-accent hover:underline">Privacy Policy</a>.
       </p>
     </div>
@@ -97,7 +97,7 @@
         <div class="card space-y-4 text-center">
           <span class="text-4xl">🥇</span>
           <h3 class="text-h3">Priority Access</h3>
-          <p>Be among the first to experience RoboLearn when it launches.</p>
+          <p>Be among the first to experience BuddyBot when it launches.</p>
         </div>
 
         <div class="card space-y-4 text-center">
@@ -123,7 +123,7 @@
       <div class="text-center space-y-4">
         <h2 class="text-h2">Our Development Journey</h2>
         <p class="text-body-lg max-w-2xl mx-auto">
-          We're working hard to bring RoboLearn to life. Follow our progress!
+          We're working hard to bring BuddyBotLearning to life. Follow our progress!
         </p>
       </div>
 

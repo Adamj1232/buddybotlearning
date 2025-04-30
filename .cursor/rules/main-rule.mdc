@@ -3,7 +3,7 @@ description:
 globs: 
 alwaysApply: true
 ---
-This project is a promotional website for RoboLearn, a voice-controlled mobile application that provides children (ages 4-12) with a customizable AI robot companion they can ask questions about the world.
+This project is a promotional website for BuddyBot, a voice-controlled mobile application that provides children (ages 4-12) with a customizable AI robot companion they can ask questions about the world.
 
 Key product details:
 1. Mobile-first application with full voice control capability

@@ -205,10 +205,10 @@
 </script>
 
 <svelte:head>
-  <title>Features - RoboLearn</title>
+  <title>Features - BuddyBotLearning</title>
   <meta 
     name="description" 
-    content="Discover RoboLearn's innovative features designed to make learning engaging and effective for children through AI-powered conversations."
+    content="Discover BuddyBot's innovative features designed to make learning engaging and effective for children through AI-powered conversations."
   />
 </svelte:head>
 
@@ -221,7 +221,7 @@
         <span class="text-accent">Fun</span>
       </h1>
       <p class="text-body-lg">
-        RoboLearn combines cutting-edge AI technology with proven educational principles to create
+        BuddyBot combines cutting-edge AI technology with proven educational principles to create
         an engaging learning experience that children love.
       </p>
     </div>
@@ -339,7 +339,7 @@
       <div class="text-center space-y-4">
         <h2 class="text-h2">Built with Safety in Mind</h2>
         <p class="text-body-lg max-w-2xl mx-auto">
-          RoboLearn prioritizes your child's safety with comprehensive protection measures.
+          BuddyBot prioritizes your child's safety with comprehensive protection measures.
         </p>
       </div>
 
@@ -379,7 +379,7 @@
       <div class="text-center space-y-4">
         <h2 class="text-h2">Experience These Features First</h2>
         <p class="text-body-lg max-w-2xl mx-auto">
-          Join our early access program to be among the first to try RoboLearn's innovative features
+          Join our early access program to be among the first to try BuddyBot's innovative features
           and help shape their development.
         </p>
       </div>
@@ -392,35 +392,10 @@
 </Section>
 
 <style>
-  button {
-    opacity: 1;
-    transform: translateY(0);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .shadow-glow {
-    box-shadow: 0 0 20px rgba(0, 209, 255, 0.1);
-  }
 
   @keyframes gradientFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  }
-
-  section {
-    position: relative;
-  }
-
-  section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0, 209, 255, 0.2), transparent);
-    animation: gradientFlow 3s ease infinite;
-    background-size: 200% 200%;
   }
 </style> 

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://robolearn.ai/sitemap.xml
+Sitemap: https://buddybotlearning.com/sitemap.xml
 
 # Disallow development and internal paths
 Disallow: /.svelte-kit/

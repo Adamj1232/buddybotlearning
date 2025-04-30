@@ -4,19 +4,19 @@
 
   const faqSections = [
     {
-      category: 'About RoboLearn',
+      category: 'About BuddyBot',
       questions: [
         {
-          q: 'What is RoboLearn?',
-          a: 'RoboLearn is a voice-controlled AI learning companion for children aged 4-12. It uses a mobile app interface where kids can ask questions about the world and receive safe, age-appropriate answers from a friendly AI robot.'
+          q: 'What is BuddyBot?',
+          a: 'BuddyBot is a voice-controlled AI learning companion for children aged 4-12. It uses a mobile app interface where kids can ask questions about the world and receive safe, age-appropriate answers from a friendly AI robot.'
         },
         {
-          q: 'What ages is RoboLearn designed for?',
-          a: "RoboLearn is primarily designed for children between the ages of 4 and 12. The AI adapts its language and complexity based on the child's interaction style and inferred age."
+          q: 'What ages is BuddyBot designed for?',
+          a: "BuddyBot is primarily designed for children between the ages of 4 and 12. The AI adapts its language and complexity based on the child's interaction style and inferred age."
         },
         {
-          q: 'How does RoboLearn differ from other educational apps?',
-          a: "Unlike curriculum-based apps, RoboLearn focuses on answering a child's natural questions through voice interaction. It encourages curiosity-driven learning rather than following a set lesson plan."
+          q: 'How does BuddyBot differ from other educational apps?',
+          a: "Unlike curriculum-based apps, BuddyBot focuses on answering a child's natural questions through voice interaction. It encourages curiosity-driven learning rather than following a set lesson plan."
         }
       ]
     },
@@ -24,16 +24,16 @@
       category: 'Educational Approach',
       questions: [
         {
-          q: 'What subjects does RoboLearn cover?',
-          a: "RoboLearn aims to cover a wide range of STEM (Science, Technology, Engineering, Math) topics and general knowledge about the world, driven by the child's questions. It's designed to explain complex topics simply."
+          q: 'What subjects does BuddyBot cover?',
+          a: "BuddyBot aims to cover a wide range of STEM (Science, Technology, Engineering, Math) topics and general knowledge about the world, driven by the child's questions. It's designed to explain complex topics simply."
         },
         {
-          q: 'How does RoboLearn support learning?',
+          q: 'How does BuddyBot support learning?',
           a: "It fosters critical thinking by encouraging questions, expands vocabulary through conversation, makes STEM topics accessible, and supports self-directed learning by following the child's interests."
         },
         {
           q: 'Is there a structured curriculum?',
-          a: "No, RoboLearn does not follow a rigid curriculum. Learning is driven by the child's curiosity and the questions they ask, promoting a more natural and engaging discovery process."
+          a: "No, BuddyBot does not follow a rigid curriculum. Learning is driven by the child's curiosity and the questions they ask, promoting a more natural and engaging discovery process."
         }
       ]
     },
@@ -59,15 +59,15 @@
       questions: [
         {
           q: 'What devices are required?',
-          a: "RoboLearn is a mobile application, initially planned for iOS and Android smartphones and tablets. It requires an internet connection for the AI to function."
+          a: "BuddyBot is a mobile application, initially planned for iOS and Android smartphones and tablets. It requires an internet connection for the AI to function."
         },
         {
           q: 'How does the voice recognition work?',
           a: "We use advanced speech recognition technology optimized for children's voices and speech patterns to ensure accurate understanding of their questions."
         },
         {
-          q: 'Is RoboLearn available now?',
-          a: "RoboLearn is currently under development. You can join our waitlist to get early access and updates on our launch progress."
+          q: 'Is BuddyBot available now?',
+          a: "BuddyBot is currently under development. You can join our waitlist to get early access and updates on our launch progress."
         }
       ]
     }
@@ -91,8 +91,8 @@
 </script>
 
 <svelte:head>
-  <title>FAQ | RoboLearn</title>
-  <meta name="description" content="Frequently asked questions about RoboLearn, the voice AI learning companion for children. Learn about safety, education, technology, and more." />
+  <title>FAQ | BuddyBotLearning</title>
+  <meta name="description" content="Frequently asked questions about BuddyBot, the voice AI learning companion for children. Learn about safety, education, technology, and more." />
   <script type="application/ld+json">
     {JSON.stringify(faqSchema)}
   </script>
@@ -106,7 +106,7 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.robolearn.ai" // Replace with actual base URL
+            "item": "https://www.buddybotlearning.com" // Replace with actual base URL
           },
           {
             "@type": "ListItem",

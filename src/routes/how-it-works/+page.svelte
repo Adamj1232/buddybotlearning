@@ -37,10 +37,10 @@
 </script>
 
 <svelte:head>
-  <title>How It Works - RoboLearn AI Learning Companion</title>
+  <title>How It Works - BuddyBot AI Learning Companion</title>
   <meta 
     name="description" 
-    content="Discover how RoboLearn's voice-controlled AI companion makes learning fun and engaging for children through natural conversations and age-appropriate explanations."
+    content="Discover how BuddyBot's voice-controlled AI companion makes learning fun and engaging for children through natural conversations and age-appropriate explanations."
   />
 </svelte:head>
 
@@ -63,7 +63,7 @@
   <Container>
     <div class="space-y-12">
       <div class="text-center">
-        <h2 class="text-h2 mb-4">How RoboLearn Works</h2>
+        <h2 class="text-h2 mb-4">How BuddyBot Works</h2>
         <p class="text-body-lg max-w-2xl mx-auto">
           A simple, natural way for children to learn through conversation.
         </p>
@@ -135,7 +135,7 @@
     <div class="space-y-8 text-center">
       <h2 class="text-h2">Ready to Start?</h2>
       <p class="text-body-lg max-w-2xl mx-auto">
-        Join our early access program to be among the first to experience RoboLearn.
+        Join our early access program to be among the first to experience BuddyBot.
       </p>
       <div class="flex justify-center">
         <a href="/waitlist" class="btn-primary">

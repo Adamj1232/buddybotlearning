@@ -7,12 +7,12 @@
     {
       id: 'overview',
       title: 'Overview',
-      content: `Welcome to RoboLearn! These Terms of Service ("Terms") govern your use of our voice-controlled educational application. By using RoboLearn, you agree to these terms. If you're under 13, you need a parent or legal guardian's permission.`
+      content: `Welcome to BuddyBot! These Terms of Service ("Terms") govern your use of our voice-controlled educational application. By using BuddyBot, you agree to these terms. If you're under 13, you need a parent or legal guardian's permission.`
     },
     {
       id: 'definitions',
       title: 'Definitions',
-      content: `• "Service" refers to the RoboLearn application
+      content: `• "Service" refers to the BuddyBot application
 • "User" means any person accessing the Service
 • "Child User" means users under 13 years old
 • "Parent" means a parent or legal guardian
@@ -109,8 +109,8 @@ Users can terminate accounts anytime.`
       id: 'contact',
       title: 'Contact Information',
       content: `For questions about these Terms:
-• Email: support@robolearn.ai
-• Website: robolearn.ai/contact
+• Email: support@buddybotlearning.com
+• Website: buddybotlearning.com/contact
 • Mail: [Physical Address]
 
 We aim to respond within 24 hours.`
@@ -140,8 +140,8 @@ We aim to respond within 24 hours.`
 </script>
 
 <svelte:head>
-  <title>Terms of Service - RoboLearn</title>
-  <meta name="description" content="RoboLearn's terms of service, designed with children's safety and education in mind" />
+  <title>Terms of Service - BuddyBotLearning</title>
+  <meta name="description" content="BuddyBotLearning's terms of service, designed with children's safety and education in mind" />
 </svelte:head>
 
 <div class="min-h-screen bg-background">

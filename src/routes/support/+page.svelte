@@ -13,7 +13,7 @@
 
 <ComingSoon 
   pageName="Support"
-  description="Our dedicated support team is here to help you and your child have the best learning experience with RoboLearn."
+  description="Our dedicated support team is here to help you and your child have the best learning experience with BuddyBot."
   features={supportFeatures}
   launchDate="Q2 2024"
 /> 

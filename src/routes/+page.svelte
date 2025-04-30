@@ -9,10 +9,10 @@
 </script>
 
 <svelte:head>
-  <title>Voice-Controlled AI Learning Companions for Curious Kids | RoboLearn</title>
+  <title>Voice-Controlled AI Learning Companions for Curious Kids | BuddyBotLearning</title>
   <meta 
     name="description" 
-    content="RoboLearn creates personalized AI companions that answer children's questions about the world, encouraging exploration and building knowledge through natural conversation."
+    content="BuddyBot creates personalized AI companions that answer children's questions about the world, encouraging exploration and building knowledge through natural conversation."
   />
 </svelte:head>
 
@@ -93,7 +93,7 @@
       <div class="text-center space-y-4">
         <h2 class="text-h2">Development Progress</h2>
         <p class="text-body-lg max-w-2xl mx-auto">
-          We're working hard to bring RoboLearn to life. Join our early access program to be among
+          We're working hard to bring BuddyBot to life. Join our early access program to be among
           the first to experience the future of children's learning.
         </p>
       </div>
@@ -110,7 +110,7 @@
       <div class="text-center space-y-4">
         <h2 class="text-h2">Join Early Access</h2>
         <p class="text-body-lg max-w-2xl mx-auto">
-          Be among the first to experience RoboLearn and help shape its development.
+          Be among the first to experience BuddyBot and help shape its development.
           Early access members receive exclusive benefits and priority access.
         </p>
       </div>
@@ -163,11 +163,11 @@
   </div>
 </section>
 
-<!-- How RoboLearn Works Section (Timeline Style) -->
+<!-- How BuddyBot Works Section (Timeline Style) -->
 <section id="how-it-works" class="py-20 md:py-28 bg-background">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="text-center mb-16">
-         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">How RoboLearn Sparks Curiosity</h2>
+         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">How BuddyBot Sparks Curiosity</h2>
          <p class="text-lg text-text-secondary max-w-2xl mx-auto">
              Engage your child's natural desire to learn through simple voice interactions and safe, AI-powered conversations.
          </p>
@@ -204,7 +204,7 @@
             <span class="w-5 h-5 text-accent">🍁</span>
           </span>
           <h3 class="text-xl font-semibold text-text-primary mb-1">Learning Naturally</h3>
-          <p class="text-base font-normal text-text-secondary">RoboLearn adapts to your child's interests, encouraging deeper exploration and reinforcing concepts through dialogue.</p>
+          <p class="text-base font-normal text-text-secondary">BuddyBot adapts to your child's interests, encouraging deeper exploration and reinforcing concepts through dialogue.</p>
        </li>
      </ol>
    </div>
@@ -221,7 +221,7 @@
       <!-- {/* Placeholder for potential future content in the right column */} -->
       <div class="order-1 lg:order-2 flex flex-col items-center justify-center text-center lg:text-left lg:items-start">
           <!-- {/* Example content for this area */}  -->
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">See RoboLearn in Action</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">See BuddyBot in Action</h2>
           <p class="text-lg text-text-secondary mb-8 max-w-md">
                Experience the intuitive voice interface and engaging learning conversations firsthand.
           </p>
@@ -305,7 +305,7 @@
   <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">Hear the Difference</h2>
       <p class="text-lg text-text-secondary mb-12 max-w-xl mx-auto">
-         Listen to a sample interaction and imagine your child engaging with RoboLearn.
+         Listen to a sample interaction and imagine your child engaging with BuddyBot.
       </p>
       <VoiceDemo />
   </div>
@@ -320,24 +320,6 @@
   }
   .card {
     @apply bg-background-lighter rounded-xl p-6 border border-border shadow-lg;
-  }
-  .progress-dot {
-    @apply w-3 h-3 rounded-full mx-1 transition-colors duration-300;
-  }
-  .progress-dot-active {
-    @apply bg-accent;
-  }
-  .progress-dot-inactive {
-    @apply bg-border;
-  }
-  .progress-line {
-    @apply h-0.5 w-8 transition-colors duration-300;
-  }
-  .progress-line-active {
-    @apply bg-accent;
-  }
-  .progress-line-inactive {
-    @apply bg-border;
   }
 
   /* Button styles */

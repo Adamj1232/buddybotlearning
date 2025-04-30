@@ -179,6 +179,14 @@
   }
 </script>
 
+<svelte:head>
+  <title>Child Safety - BuddyBotLearning</title>
+  <meta 
+    name="description" 
+    content="Learn about BuddyBot's comprehensive child safety measures, including content filtering, privacy protection, and parental controls."
+  />
+</svelte:head>
+
 <div class="min-h-screen bg-[#171923] text-white">
   <!-- Hero Section -->
   <section class="relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
@@ -309,9 +317,9 @@
       </div>
       <div class="mt-8 p-6 bg-[#171923] rounded-xl border border-[#00D1FF]/20">
         <h3 class="text-xl font-semibold text-[#00D1FF] mb-4">COPPA Compliance</h3>
-        <p class="text-gray-300 mb-4">
-          RoboLearn is fully compliant with the Children's Online Privacy Protection Act (COPPA),
-          ensuring the highest standards of privacy protection for children under 13.
+        <p class="text-base text-gray-400">
+          BuddyBotLearning is fully compliant with the Children's Online Privacy Protection Act (COPPA),
+          ensuring a safe digital environment for your child.
         </p>
         <ul class="list-disc list-inside text-gray-300 space-y-2">
           <li>No collection of personal information without parental consent</li>
@@ -349,7 +357,6 @@
           question="Show me the parent dashboard"
           answer="Here's a preview of our comprehensive parental controls dashboard."
           voiceState="responding"
-          isAnswering={false}
         />
       </div>
     </div>
@@ -462,12 +469,13 @@
       <p class="text-xl text-gray-300 mb-8">
         Join our waitlist to experience worry-free educational exploration for your child.
       </p>
-      <button 
-        class="bg-[#00D1FF] text-[#171923] px-8 py-3 rounded-lg font-semibold hover:brightness-110 transition-all duration-300"
-        aria-label="Join the RoboLearn waitlist"
+      <a 
+        href="/waitlist"
+        class="btn-primary w-full md:w-auto transition-all duration-300"
+        aria-label="Join the BuddyBot waitlist"
       >
-        Join the Waitlist
-      </button>
+        Join Waitlist
+      </a>
     </div>
   </section>
 </div>

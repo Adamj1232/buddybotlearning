@@ -8,7 +8,7 @@
     {
       id: 'overview',
       title: 'Overview',
-      content: `RoboLearn is committed to protecting the privacy of children and families. This privacy policy explains how we collect, use, and safeguard your information when you use our voice-controlled educational application.`
+      content: `BuddyBotLearning is committed to protecting the privacy of children and families. This privacy policy explains how we collect, use, and safeguard your information when you use our voice-controlled educational application.`
     },
     {
       id: 'information-collection',
@@ -102,8 +102,8 @@ We'll notify you of significant changes.`
 </script>
 
 <svelte:head>
-  <title>Privacy Policy - RoboLearn</title>
-  <meta name="description" content="RoboLearn's commitment to protecting children's privacy and data security" />
+  <title>Privacy Policy - BuddyBotLearning</title>
+  <meta name="description" content="BuddyBotLearning's commitment to protecting children's privacy and data security" />
 </svelte:head>
 
 <div class="min-h-screen bg-background">

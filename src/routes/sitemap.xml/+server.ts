@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
 
 // Adjust this base URL to your production environment
-const BASE_URL = 'https://robolearn.ai';
+const BASE_URL = 'https://buddybotlearning.com';
 
 const pages = [
   {

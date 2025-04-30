@@ -1,6 +1,6 @@
-# RoboLearn Website
+# BuddyBotLearning Website
 
-A modern, responsive website for the RoboLearn educational AI platform, built with SvelteKit and Tailwind CSS.
+A modern, responsive website for the BuddyBot educational AI platform, built with SvelteKit and Tailwind CSS.
 
 ## Features
 
@@ -28,8 +28,8 @@ A modern, responsive website for the RoboLearn educational AI platform, built wi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/robolearn-website.git
-cd robolearn-website
+git clone https://github.com/yourusername/buddybotlearning-website.git
+cd buddybotlearning-website
 ```
 
 2. Install dependencies:
@@ -53,7 +53,7 @@ yarn build
 ## Project Structure
 
 ```
-robolearn-website/
+buddybotlearning-website/
 ├── src/
 │   ├── lib/
 │   │   └── components/    # Reusable components

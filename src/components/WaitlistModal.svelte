@@ -15,7 +15,7 @@
   // let hasShown = false;
   let sessionDisplayCount = 0;
   const MAX_DISPLAYS_PER_SESSION = 2;
-  const SESSION_COUNT_KEY = 'robolearn_modal_session_count';
+  const SESSION_COUNT_KEY = 'buddybot_modal_session_count';
 
   function checkAndShowModal(trigger: 'exit_intent' | 'scroll_depth' | 'time_delay'): boolean {
     if (isVisible || hasInteracted || sessionDisplayCount >= MAX_DISPLAYS_PER_SESSION) {
@@ -185,38 +185,6 @@
     /* Prevent background flash during transition */
     background-color: var(--surface, #1E2130);
   }
-
-  .close-button {
-    position: absolute;
-    top: 0.75rem; /* Adjust position */
-    right: 0.75rem; /* Adjust position */
-    width: 2.5rem; /* Larger touch target */
-    height: 2.5rem; /* Larger touch target */
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15); /* Slightly more visible */
-    color: white;
-    border: none; /* Remove default border */
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10; /* Ensure above content */
-    line-height: 1; /* Prevent text descenders affecting layout */
-  }
-
-  .close-button:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: scale(1.1); /* Add slight scale effect */
-  }
-
-   /* Add focus state for accessibility */
-   .close-button:focus-visible {
-      outline: 2px solid var(--primary, #00D1FF);
-      outline-offset: 2px;
-      background: rgba(255, 255, 255, 0.2);
-   }
 
   /* Hide scrollbar but keep functionality */
   .modal-content {

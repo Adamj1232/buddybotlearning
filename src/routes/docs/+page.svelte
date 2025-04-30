@@ -13,7 +13,7 @@
 
 <ComingSoon 
   pageName="Documentation"
-  description="Comprehensive guides and documentation to help you get the most out of RoboLearn's educational platform."
+  description="Comprehensive guides and documentation to help you get the most out of BuddyBot's educational platform."
   features={docFeatures}
   launchDate="Q2 2024"
 /> 

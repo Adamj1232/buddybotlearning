@@ -93,7 +93,7 @@
   <div class="space-y-4">
     <h2 class="text-2xl font-semibold text-center">Join Early Access</h2>
     <p class="text-text-secondary text-center">
-      Be among the first to experience RoboLearn and help shape its development.
+      Be among the first to experience BuddyBot and help shape its development.
     </p>
   </div>
 

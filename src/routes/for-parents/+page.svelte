@@ -48,20 +48,20 @@
 
   const faqs = [
     {
-      question: 'How does RoboLearn keep my child safe?',
-      answer: 'RoboLearn employs multiple layers of safety measures including real-time content filtering, age-appropriate boundaries, and comprehensive parental controls. All interactions are monitored and filtered for appropriateness.'
+      question: 'How does BuddyBot keep my child safe?',
+      answer: 'BuddyBot employs multiple layers of safety measures including real-time content filtering, age-appropriate boundaries, and comprehensive parental controls. All interactions are monitored and filtered for appropriateness.'
     },
     {
       question: 'How much screen time is involved?',
-      answer: 'RoboLearn is primarily voice-controlled, minimizing screen time while maximizing engagement. Visual elements are used only when necessary for learning enhancement.'
+      answer: 'BuddyBot is primarily voice-controlled, minimizing screen time while maximizing engagement. Visual elements are used only when necessary for learning enhancement.'
     },
     {
-      question: 'What age group is RoboLearn suitable for?',
-      answer: 'RoboLearn is designed for children aged 4-12, with content and interactions that automatically adapt to your child\'s age and learning level.'
+      question: 'What age group is BuddyBot suitable for?',
+      answer: 'BuddyBot is designed for children aged 4-12, with content and interactions that automatically adapt to your child\'s age and learning level.'
     },
     {
-      question: 'How does RoboLearn support my child\'s learning?',
-      answer: 'Through natural conversation and adaptive learning, RoboLearn follows your child\'s curiosity while ensuring educational value. It builds on their interests to explore STEM concepts in an engaging way.'
+      question: 'How does BuddyBot support my child\'s learning?',
+      answer: 'Through natural conversation and adaptive learning, BuddyBot follows your child\'s curiosity while ensuring educational value. It builds on their interests to explore STEM concepts in an engaging way.'
     }
   ] as const;
 
@@ -142,7 +142,7 @@
   <!-- Daily Learning Journey -->
   <section class="py-16 px-4 md:px-8 lg:px-16 bg-[#1E2130]">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">A Day with RoboLearn</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">A Day with BuddyBot</h2>
       
       <div class="relative">
         <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#00D1FF]/20"></div>
@@ -208,7 +208,7 @@
       </p>
       <button 
         class="bg-[#00D1FF] text-[#171923] px-8 py-3 rounded-lg font-semibold hover:brightness-110 transition-all duration-300"
-        aria-label="Join the RoboLearn waitlist"
+        aria-label="Join the BuddyBot waitlist"
       >
         Join the Waitlist
       </button>

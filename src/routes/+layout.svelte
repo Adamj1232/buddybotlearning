@@ -6,33 +6,33 @@
   // Explicitly defining type for data
   export let data: { url: string };
 
-  const baseUrl = 'https://www.robolearn.ai'; // Replace if different
+  const baseUrl = 'https://www.buddybotlearning.com'; // Replace if different
   const canonicalUrl = `${baseUrl}${data.url === '/' ? '' : data.url}`;
   const ogImageUrl = `${baseUrl}/og-image.png`; // Replace with actual image URL
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "RoboLearn",
+    "name": "BuddyBotLearning",
     "url": baseUrl,
     "logo": `${baseUrl}/logo.png`, // Replace with actual logo URL
     "sameAs": [
       // Add social media profile URLs here if available
-      // "https://www.facebook.com/RoboLearn",
-      // "https://www.twitter.com/RoboLearn",
-      // "https://www.linkedin.com/company/RoboLearn"
+      // "https://www.facebook.com/BuddyBotLearning",
+      // "https://www.twitter.com/BuddyBot",
+      // "https://www.linkedin.com/company/BuddyBotLearning"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Support",
-      "email": "support@robolearn.ai" // Replace with actual support email
+      "email": "support@buddybotlearning.com" // Replace with actual support email
     }
   };
 
   const webApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "RoboLearn",
+    "name": "BuddyBot",
     "url": baseUrl,
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "iOS, Android", // Adjust as needed
@@ -49,7 +49,7 @@
     },
      "learningResourceType": "learning activity", // Or more specific if applicable
      "isFamilyFriendly": "true",
-     "description": "RoboLearn is a voice-controlled mobile application that provides children (ages 4-12) with a customizable AI robot companion they can ask questions about the world.",
+     "description": "BuddyBot is a voice-controlled mobile application that provides children (ages 4-12) with a customizable AI robot companion they can ask questions about the world.",
      "provider": organizationSchema // Nesting Organization schema
   };
 
@@ -66,17 +66,17 @@
   <link rel="canonical" href="{canonicalUrl}" />
 
   <!-- Basic Open Graph Tags -->
-  <meta property="og:title" content="RoboLearn - Voice AI Learning for Children" />
-  <meta property="og:description" content="Explore the world with RoboLearn, a voice-controlled AI companion for curious kids aged 4-12." />
+  <meta property="og:title" content="BuddyBot - Voice AI Learning for Children" />
+  <meta property="og:description" content="Explore the world with BuddyBot, a voice-controlled AI companion for curious kids aged 4-12." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{canonicalUrl}" />
   <meta property="og:image" content="{ogImageUrl}" />
-  <meta property="og:site_name" content="RoboLearn" />
+  <meta property="og:site_name" content="BuddyBotLearning" />
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="RoboLearn - Voice AI Learning for Children" />
-  <meta name="twitter:description" content="Explore the world with RoboLearn, a voice-controlled AI companion for curious kids aged 4-12." />
+  <meta name="twitter:title" content="BuddyBot - Voice AI Learning for Children" />
+  <meta name="twitter:description" content="Explore the world with BuddyBot, a voice-controlled AI companion for curious kids aged 4-12." />
   <meta name="twitter:image" content="{ogImageUrl}" />
 
   <!-- JSON-LD Schema Markup -->
