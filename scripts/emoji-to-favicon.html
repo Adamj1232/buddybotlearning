@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emoji to Favicon</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="border:1px solid black;"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.font = '32px serif';
+        ctx.fillText('🤖', 16, 16);
+        
+        // Convert to PNG
+        const link = document.createElement('a');
+        link.download = 'favicon.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    </script>
+</body>
+</html> 
