@@ -84,11 +84,11 @@
   on:submit={handleSubmit}
   class="w-full max-w-md mx-auto space-y-6 {variant === 'modal' ? 'p-6' : 'p-0'}"
 >
-  {#if showStatus}
+  <!-- {#if showStatus}
     <div class="flex justify-center">
       <StatusBadge type="coming-soon" />
     </div>
-  {/if}
+  {/if} -->
 
   <div class="space-y-4">
     <h2 class="text-2xl font-semibold text-center">Join Early Access</h2>

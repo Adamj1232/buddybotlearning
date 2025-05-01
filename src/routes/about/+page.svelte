@@ -284,7 +284,7 @@
   </section>
 
   <!-- Team Section -->
-  <section class="relative py-24">
+  <!-- <section class="relative py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
         <span class="gradient-text">Our Team</span>
@@ -314,7 +314,7 @@
         {/each}
       </div>
     </div>
-  </section>
+  </section> -->
 </div>
 
 <style lang="postcss">

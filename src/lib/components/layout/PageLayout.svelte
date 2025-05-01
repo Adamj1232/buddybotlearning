@@ -40,9 +40,9 @@
         <span class="font-semibold text-text-primary">BuddyBotLearning</span>
       </a>
 
-      {#if showStatus}
+      <!-- {#if showStatus}
         <StatusBadge type="coming-soon" />
-      {/if}
+      {/if} -->
 
       <nav class="hidden md:flex items-center space-x-6">
         <a 
