@@ -243,7 +243,7 @@
         <div class="card space-y-4">
           <div class="flex items-center justify-between">
             <h3 class="text-h3">Voice Interaction</h3>
-            <StatusBadge type="coming-soon" />
+            <!-- <StatusBadge type="coming-soon" /> -->
           </div>
           <p>Natural voice conversations make learning accessible for children of all ages and reading levels.</p>
           <ul class="space-y-2 text-text-secondary">
@@ -287,7 +287,7 @@
         <div class="card space-y-4">
           <div class="flex items-center justify-between">
             <h3 class="text-h3">STEM Focus</h3>
-            <StatusBadge type="coming-soon" />
+            <!-- <StatusBadge type="coming-soon" /> -->
           </div>
           <p>Strong emphasis on science, technology, engineering, and mathematics.</p>
           <ul class="space-y-2 text-text-secondary">

@@ -58,8 +58,17 @@
         body: JSON.stringify({ email, role })
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to submit form');
+        if (data.errors) {
+          // Server-side validation errors
+          errors = data.errors;
+        } else {
+          // Generic error message
+          errors.submit = data.error || 'Failed to submit form';
+        }
+        throw new Error('Form submission failed');
       }
 
       isSuccess = true;
@@ -71,7 +80,9 @@
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      errors.submit = 'An unexpected error occurred. Please try again later.';
+      if (!errors.submit) { // Only set if not already set from server response
+        errors.submit = 'An unexpected error occurred. Please try again later.';
+      }
       dispatch('error', error);
     } finally {
       isSubmitting = false;

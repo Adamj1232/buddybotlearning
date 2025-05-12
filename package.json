@@ -43,6 +43,8 @@
   "dependencies": {
     "@iconify/svelte": "^4.2.0",
     "@rgossiaux/svelte-headlessui": "^2.0.0",
+    "@types/node": "^22.15.17",
+    "resend": "^4.5.1",
     "svelte-inview": "^4.0.4"
   }
 }

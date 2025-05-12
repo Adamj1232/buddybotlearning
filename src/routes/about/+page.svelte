@@ -227,7 +227,7 @@
          <blockquote class="text-text-secondary italic mb-4">
            "Conversational AI holds immense potential for personalized education. By allowing children to lead the inquiry process, platforms like BuddyBot can cultivate deeper conceptual understanding and a lifelong love for learning."
          </blockquote>
-         <p class="text-sm text-cyan-400">- Placeholder Name, Child Development Expert</p>
+         <p class="text-sm text-cyan-400">- Taryn Carpenter, Child Development Expert</p>
       </div>
 
     </div>

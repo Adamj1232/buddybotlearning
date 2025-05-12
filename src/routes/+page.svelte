@@ -43,9 +43,17 @@
 
       <div class="relative">
         <PreviewIndicator />
-        <div class="aspect-square bg-background-surface rounded-card border border-border p-8 flex items-center justify-center">
-          <span class="text-8xl">🤖</span>
+        <div class="aspect-square bg-background-surface rounded-card border border-border overflow-hidden">
+          <iframe 
+            src="https://buddy-bot-iota.vercel.app/" 
+            title="BuddyBot Live App Preview" 
+            class="w-full h-full border-0" 
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          ></iframe>
         </div>
+        <p class="text-xs text-text-secondary mt-3 text-center lg:text-left px-2">
+          <strong>Live App Preview:</strong> Explore BuddyBot now! Chat interactions with custom robots use placeholders for now. Full AI conversations coming soon!
+        </p>
       </div>
     </div>
   </Container>
@@ -188,7 +196,7 @@
             <span class="w-5 h-5 text-accent">🤖</span>
           </span>
           <h3 class="text-xl font-semibold text-text-primary mb-1">Engaging Conversations</h3>
-          <p class="text-base font-normal text-text-secondary">Our AI companion provides age-appropriate, informative answers in a friendly, conversational style, adapting to their understanding.</p>
+          <p class="text-base font-normal text-text-secondary">Our AI companion provides age-appropriate, informative answers in a friendly, conversational style. <em>(You can try a live preview on our homepage! Full AI chat functionality is launching very soon.)</em></p>
        </li>
        <!-- Step 3 -->
         <li class="mb-10 ml-10">
@@ -223,7 +231,7 @@
           <!-- {/* Example content for this area */}  -->
           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-text-primary">See BuddyBot in Action</h2>
           <p class="text-lg text-text-secondary mb-8 max-w-md">
-               Experience the intuitive voice interface and engaging learning conversations firsthand.
+               Experience the intuitive voice interface firsthand with our live app preview (featured at the top of this page!). While chat interactions with custom robots currently use placeholders, full AI-powered conversations are launching very soon. See how BuddyBot makes learning engaging.
           </p>
           <a href="/features" class="btn-secondary inline-flex items-center hover:border-accent hover:text-accent">
               <span class="w-5 h-5 mr-2">📄</span>
